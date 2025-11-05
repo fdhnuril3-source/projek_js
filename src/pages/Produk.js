@@ -1,8 +1,15 @@
-import React from "react";
+import React, { use } from "react";
+import { useNavigate } from "react-router-dom";
+
 function Produk(){
+    const navigate = useNavigate();
+    function goTambahData(){
+        navigate('/produk/add');
+    }
     return (
         <div>
-            <h1>Selamat datang di halaman Produk </h1>
+            <button class="btn btn-sm btn-primary" onClick={goTambahData}>Tambah Data</button>
+            <h1>Produk </h1>
         </div>
     );
 }
